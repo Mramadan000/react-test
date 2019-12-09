@@ -4,14 +4,33 @@ import Child from "./Child";
 
 class App extends Component {
   state = {
-    title: "Hello sila"
+    items: [
+      {
+        id: 1,
+        name: 'mizo',
+        age: 32
+      },
+      {
+        id: 2,
+        name: 'aya',
+        age: 28
+      },
+      {
+        id: 3,
+        name: 'sila',
+        age: 3
+      },
+      {
+        id: 4,
+        name: 'asia',
+        age: 1
+      }
+    ]
   };
-
   render() {
     return (
       <div>
-        <h1>Hello React</h1>
-        <Child address={this.state.title} />
+        <Child passData={this.state.items} />
       </div>
     );
   }

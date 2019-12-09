@@ -1,12 +1,14 @@
 import React from "react";
-import { x, y } from "./ExportFile";
 
 const Child = props => {
-  return (
+  const listItems = props.passData.map((item, id) => (
+    <ul key={id}>
+      <li>ID: {item.id} => my name is {item.name} and I have {item.age} years old</li>
+    </ul>
+  ));
+  return(
     <div>
-      <h2>{props.address}</h2>
-      <h3>{x}</h3>
-      <h4>{y}</h4>
+      {listItems}
     </div>
   );
 };
